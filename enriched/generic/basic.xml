@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BasicTestSuite" tests="3" failures="0" errors="0" skipped="0" time="0.125" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <!-- py-juxlib environment metadata -->
+    <property name="jux.hostname" value="build-server-01"/>
+    <property name="jux.username" value="ci-user"/>
+    <property name="jux.platform" value="Linux-6.1.0-x86_64"/>
+    <property name="jux.python_version" value="3.12.1"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="my-project"/>
+    <property name="jux.git_commit" value="abc123def456789012345678901234567890abcd"/>
+    <property name="jux.git_branch" value="main"/>
+    <property name="jux.git_status" value="clean"/>
+    <property name="jux.git_remote" value="https://github.com/example/my-project.git"/>
+    <property name="jux.ci_provider" value="github"/>
+    <property name="jux.ci_build_id" value="12345"/>
+    <property name="jux.ci_build_url" value="https://github.com/example/my-project/actions/runs/12345"/>
+  </properties>
+  <testcase name="test_addition" classname="tests.test_math" time="0.042"/>
+  <testcase name="test_subtraction" classname="tests.test_math" time="0.038"/>
+  <testcase name="test_multiplication" classname="tests.test_math" time="0.045"/>
+</testsuite>

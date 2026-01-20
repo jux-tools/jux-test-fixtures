@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AllSkippedTests" tests="5" failures="0" errors="0" skipped="5" time="0.005" timestamp="2026-01-20T10:30:00">
+  <testcase name="test_feature_a" classname="tests.test_skipped" time="0.001">
+    <skipped message="Feature A not enabled"/>
+  </testcase>
+  <testcase name="test_feature_b" classname="tests.test_skipped" time="0.001">
+    <skipped message="Feature B requires database"/>
+  </testcase>
+  <testcase name="test_feature_c" classname="tests.test_skipped" time="0.001">
+    <skipped message="Feature C requires external service"/>
+  </testcase>
+  <testcase name="test_feature_d" classname="tests.test_skipped" time="0.001">
+    <skipped message="Feature D is deprecated"/>
+  </testcase>
+  <testcase name="test_feature_e" classname="tests.test_skipped" time="0.001">
+    <skipped/>
+  </testcase>
+</testsuite>

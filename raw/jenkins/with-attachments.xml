@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Screenshot Tests" tests="3" failures="1" errors="0" skipped="0" time="8.765" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <property name="BUILD_NUMBER" value="5678"/>
+    <property name="WORKSPACE" value="/var/jenkins/workspace/ui-tests"/>
+  </properties>
+  <testcase name="testLoginPage" classname="com.example.ui.LoginPageTest" time="2.345">
+    <system-out><![CDATA[
+[[ATTACHMENT|/var/jenkins/workspace/ui-tests/screenshots/login-page.png]]
+Screenshot captured: login-page.png
+]]></system-out>
+  </testcase>
+  <testcase name="testDashboard" classname="com.example.ui.DashboardTest" time="3.456">
+    <failure message="Dashboard element not found" type="org.openqa.selenium.NoSuchElementException">
+org.openqa.selenium.NoSuchElementException: Unable to locate element: #dashboard-widget
+    </failure>
+    <system-out><![CDATA[
+[[ATTACHMENT|/var/jenkins/workspace/ui-tests/screenshots/dashboard-failure.png]]
+[[ATTACHMENT|/var/jenkins/workspace/ui-tests/logs/selenium.log]]
+Screenshot captured on failure: dashboard-failure.png
+]]></system-out>
+  </testcase>
+  <testcase name="testSettingsPage" classname="com.example.ui.SettingsPageTest" time="2.964">
+    <system-out><![CDATA[
+[[ATTACHMENT|/var/jenkins/workspace/ui-tests/screenshots/settings-page.png]]
+Screenshot captured: settings-page.png
+]]></system-out>
+  </testcase>
+</testsuite>

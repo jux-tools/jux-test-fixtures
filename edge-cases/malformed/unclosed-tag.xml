@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UnclosedTag" tests="1">
+  <testcase name="test_example" classname="tests.test_example" time="0.123">
+</testsuite>

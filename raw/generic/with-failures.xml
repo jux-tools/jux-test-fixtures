@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FailureTests" tests="4" failures="2" errors="0" skipped="0" time="0.456" timestamp="2026-01-20T10:30:00">
+  <testcase name="test_passes" classname="tests.test_failures" time="0.089"/>
+  <testcase name="test_assertion_failure" classname="tests.test_failures" time="0.123">
+    <failure message="AssertionError: False is not true" type="AssertionError">
+Traceback (most recent call last):
+  File "/home/user/project/tests/test_failures.py", line 15, in test_assertion_failure
+    self.assertTrue(False)
+AssertionError: False is not true
+    </failure>
+  </testcase>
+  <testcase name="test_also_passes" classname="tests.test_failures" time="0.076"/>
+  <testcase name="test_comparison_failure" classname="tests.test_failures" time="0.168">
+    <failure message="AssertionError: 'expected' != 'actual'" type="AssertionError">
+Traceback (most recent call last):
+  File "/home/user/project/tests/test_failures.py", line 23, in test_comparison_failure
+    self.assertEqual('expected', 'actual')
+AssertionError: 'expected' != 'actual'
+- expected
++ actual
+    </failure>
+  </testcase>
+</testsuite>

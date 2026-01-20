@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SkippedTests" tests="4" failures="0" errors="0" skipped="2" time="0.234" timestamp="2026-01-20T10:30:00">
+  <testcase name="test_passes" classname="tests.test_skipped" time="0.089"/>
+  <testcase name="test_skip_reason" classname="tests.test_skipped" time="0.000">
+    <skipped message="Feature not implemented yet"/>
+  </testcase>
+  <testcase name="test_also_passes" classname="tests.test_skipped" time="0.145"/>
+  <testcase name="test_skip_platform" classname="tests.test_skipped" time="0.000">
+    <skipped message="Test requires Windows platform"/>
+  </testcase>
+</testsuite>

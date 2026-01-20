@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <properties>
+    <!-- Polarion ALM properties -->
+    <property name="polarion-project-id" value="MyProject"/>
+    <property name="polarion-testrun-id" value="TR-2026-002"/>
+    <property name="polarion-testrun-title" value="Feature: User Authentication"/>
+    <property name="polarion-user-id" value="testuser"/>
+    <!-- py-juxlib environment metadata -->
+    <property name="jux.hostname" value="ci-runner-polarion"/>
+    <property name="jux.username" value="polarion-ci"/>
+    <property name="jux.platform" value="Linux-5.10.0-x86_64"/>
+    <property name="jux.python_version" value="3.11.8"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="myproject-tests"/>
+    <property name="jux.git_commit" value="abcdef1234567890abcdef1234567890abcdef12"/>
+    <property name="jux.git_branch" value="release/v2.0"/>
+    <property name="jux.git_status" value="clean"/>
+    <property name="jux.ci_provider" value="gitlab"/>
+    <property name="jux.ci_build_id" value="98765"/>
+    <property name="jux.ci_build_url" value="https://gitlab.example.com/myproject/tests/-/jobs/98765"/>
+  </properties>
+  <testsuite name="AuthenticationTests" tests="4" failures="1" errors="0" skipped="0" time="2.345">
+    <testcase name="test_login_success" classname="tests.test_auth.LoginTest" time="0.567">
+      <properties>
+        <property name="polarion-testcase-id" value="TC-AUTH-001"/>
+      </properties>
+    </testcase>
+    <testcase name="test_logout_success" classname="tests.test_auth.LogoutTest" time="0.234">
+      <properties>
+        <property name="polarion-testcase-id" value="TC-AUTH-002"/>
+      </properties>
+    </testcase>
+    <testcase name="test_session_timeout" classname="tests.test_auth.SessionTest" time="0.789">
+      <properties>
+        <property name="polarion-testcase-id" value="TC-AUTH-003"/>
+      </properties>
+      <failure message="Session did not timeout as expected" type="AssertionError">
+AssertionError: Session did not timeout after 30 minutes
+      </failure>
+    </testcase>
+    <testcase name="test_remember_me" classname="tests.test_auth.LoginTest" time="0.755">
+      <properties>
+        <property name="polarion-testcase-id" value="TC-AUTH-004"/>
+      </properties>
+    </testcase>
+  </testsuite>
+</testsuites>

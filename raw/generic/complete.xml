@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="AllTests" tests="8" failures="2" errors="1" skipped="1" time="1.523" timestamp="2026-01-20T10:30:00">
+  <testsuite name="MathTests" tests="4" failures="1" errors="0" skipped="0" time="0.523" timestamp="2026-01-20T10:30:00" hostname="build-server" id="0" package="com.example.math">
+    <properties>
+      <property name="os.name" value="Linux"/>
+      <property name="java.version" value="17.0.1"/>
+    </properties>
+    <testcase name="test_addition" classname="com.example.math.CalculatorTest" time="0.125">
+      <system-out>Testing 2 + 2 = 4</system-out>
+    </testcase>
+    <testcase name="test_subtraction" classname="com.example.math.CalculatorTest" time="0.098"/>
+    <testcase name="test_division" classname="com.example.math.CalculatorTest" time="0.156">
+      <failure message="AssertionError: Expected 2.5 but got 2" type="AssertionError">
+Traceback (most recent call last):
+  File "test_math.py", line 25, in test_division
+    assert divide(5, 2) == 2.5
+AssertionError: Expected 2.5 but got 2
+      </failure>
+    </testcase>
+    <testcase name="test_multiplication" classname="com.example.math.CalculatorTest" time="0.144"/>
+    <system-out>Suite setup completed</system-out>
+    <system-err>Warning: Using deprecated calculator API</system-err>
+  </testsuite>
+  <testsuite name="StringTests" tests="4" failures="1" errors="1" skipped="1" time="1.000" timestamp="2026-01-20T10:30:01" hostname="build-server" id="1" package="com.example.string">
+    <testcase name="test_concatenation" classname="com.example.string.StringUtilsTest" time="0.234"/>
+    <testcase name="test_split" classname="com.example.string.StringUtilsTest" time="0.312">
+      <failure message="Expected 3 parts but got 2" type="AssertionError">
+java.lang.AssertionError: Expected 3 parts but got 2
+	at com.example.string.StringUtilsTest.test_split(StringUtilsTest.java:45)
+      </failure>
+    </testcase>
+    <testcase name="test_null_handling" classname="com.example.string.StringUtilsTest" time="0.189">
+      <error message="NullPointerException" type="java.lang.NullPointerException">
+java.lang.NullPointerException: Cannot invoke method on null
+	at com.example.string.StringUtils.process(StringUtils.java:23)
+	at com.example.string.StringUtilsTest.test_null_handling(StringUtilsTest.java:52)
+      </error>
+    </testcase>
+    <testcase name="test_unicode" classname="com.example.string.StringUtilsTest" time="0.000">
+      <skipped message="Unicode support not yet implemented"/>
+    </testcase>
+  </testsuite>
+</testsuites>

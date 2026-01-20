@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Special&lt;Characters&gt;Test" tests="4" failures="1" errors="0" skipped="0" time="0.456" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <property name="ampersand" value="Tom &amp; Jerry"/>
+    <property name="quotes" value="He said &quot;Hello&quot;"/>
+    <property name="apostrophe" value="It&apos;s working"/>
+    <property name="angle_brackets" value="&lt;tag&gt;content&lt;/tag&gt;"/>
+  </properties>
+  <testcase name="test_ampersand_in_name_&amp;_more" classname="tests.test_special.Ampersand&amp;Test" time="0.089"/>
+  <testcase name="test_quotes_'double'_and_&quot;single&quot;" classname="tests.test_special.QuotesTest" time="0.076"/>
+  <testcase name="test_angle_brackets_&lt;value&gt;" classname="tests.test_special.BracketsTest" time="0.098">
+    <failure message="Expected &lt;foo&gt; but got &lt;bar&gt;" type="AssertionError">
+AssertionError: Expected &lt;foo&gt; but got &lt;bar&gt;
+Comparison:
+- &lt;foo attr=&quot;value&quot;&gt;
++ &lt;bar attr=&quot;other&quot;&gt;
+    </failure>
+  </testcase>
+  <testcase name="test_cdata_content" classname="tests.test_special.CDATATest" time="0.193">
+    <system-out><![CDATA[
+Raw output with special chars: <>&"'
+JavaScript: if (x < 5 && y > 10) { return "ok"; }
+Regex: /^[a-z]+$/i
+]]></system-out>
+  </testcase>
+</testsuite>

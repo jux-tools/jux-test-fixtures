@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Pipeline Stages" tests="6" failures="1" errors="0" skipped="0" time="45.678">
+  <testsuite name="Build Stage" tests="2" failures="0" errors="0" skipped="0" time="15.234" timestamp="2026-01-20T10:30:00">
+    <properties>
+      <property name="STAGE_NAME" value="Build"/>
+      <property name="STAGE_STATUS" value="SUCCESS"/>
+    </properties>
+    <testcase name="Compile Source" classname="Pipeline.Build" time="8.567"/>
+    <testcase name="Run Unit Tests" classname="Pipeline.Build" time="6.667"/>
+  </testsuite>
+  <testsuite name="Test Stage" tests="2" failures="1" errors="0" skipped="0" time="18.456" timestamp="2026-01-20T10:31:00">
+    <properties>
+      <property name="STAGE_NAME" value="Test"/>
+      <property name="STAGE_STATUS" value="UNSTABLE"/>
+    </properties>
+    <testcase name="Run Integration Tests" classname="Pipeline.Test" time="12.345"/>
+    <testcase name="Run E2E Tests" classname="Pipeline.Test" time="6.111">
+      <failure message="E2E test failed: Login timeout" type="TestFailure">
+E2E test 'user-login' failed after 30s timeout
+Expected: Login successful
+Got: Timeout waiting for dashboard
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Deploy Stage" tests="2" failures="0" errors="0" skipped="0" time="11.988" timestamp="2026-01-20T10:32:00">
+    <properties>
+      <property name="STAGE_NAME" value="Deploy"/>
+      <property name="STAGE_STATUS" value="SUCCESS"/>
+      <property name="DEPLOY_ENV" value="staging"/>
+    </properties>
+    <testcase name="Deploy to Staging" classname="Pipeline.Deploy" time="8.765"/>
+    <testcase name="Verify Deployment" classname="Pipeline.Deploy" time="3.223"/>
+  </testsuite>
+</testsuites>

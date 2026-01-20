@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <properties>
+    <property name="polarion-project-id" value="MyProject"/>
+    <property name="polarion-testrun-id" value="TR-2026-001"/>
+    <property name="polarion-testrun-title" value="Sprint 5 Regression Tests"/>
+    <property name="polarion-user-id" value="testuser"/>
+  </properties>
+  <testsuite name="LoginTests" tests="3" failures="0" errors="0" skipped="0" time="1.234">
+    <testcase name="test_login_valid_credentials" classname="tests.test_auth" time="0.456"/>
+    <testcase name="test_login_invalid_password" classname="tests.test_auth" time="0.389"/>
+    <testcase name="test_login_locked_account" classname="tests.test_auth" time="0.389"/>
+  </testsuite>
+</testsuites>

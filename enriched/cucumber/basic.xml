@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login Feature" tests="3" failures="0" errors="0" skipped="0" time="2.345" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <!-- py-juxlib environment metadata -->
+    <property name="jux.hostname" value="bdd-runner"/>
+    <property name="jux.username" value="qa-engineer"/>
+    <property name="jux.platform" value="Linux-6.2.0-x86_64"/>
+    <property name="jux.python_version" value="3.12.0"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="webapp-bdd"/>
+    <property name="jux.git_commit" value="fedcba0987654321fedcba0987654321fedcba09"/>
+    <property name="jux.git_branch" value="qa/sprint-5"/>
+    <property name="jux.git_status" value="clean"/>
+    <property name="jux.ci_provider" value="circleci"/>
+    <property name="jux.ci_build_id" value="456789"/>
+    <!-- Tool versions -->
+    <property name="jux.tool.behave" value="1.2.6"/>
+    <property name="jux.tool.selenium" value="4.15.0"/>
+  </properties>
+  <testcase name="Scenario: Successful login with valid credentials" classname="Login Feature" time="0.789">
+    <system-out><![CDATA[
+Given the user is on the login page
+When the user enters valid credentials
+And the user clicks the login button
+Then the user should be redirected to the dashboard
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Failed login with invalid password" classname="Login Feature" time="0.567">
+    <system-out><![CDATA[
+Given the user is on the login page
+When the user enters an invalid password
+And the user clicks the login button
+Then an error message should be displayed
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Login with locked account" classname="Login Feature" time="0.989">
+    <system-out><![CDATA[
+Given the user is on the login page
+When the user enters credentials for a locked account
+And the user clicks the login button
+Then the account locked message should be displayed
+]]></system-out>
+  </testcase>
+</testsuite>

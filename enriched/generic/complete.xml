@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="AllTests" tests="8" failures="2" errors="1" skipped="1" time="1.523" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <!-- py-juxlib environment metadata -->
+    <property name="jux.hostname" value="jenkins-agent-03"/>
+    <property name="jux.username" value="jenkins"/>
+    <property name="jux.platform" value="Linux-5.15.0-x86_64"/>
+    <property name="jux.python_version" value="3.11.5"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="acme-webapp"/>
+    <property name="jux.git_commit" value="def456789012345678901234567890abcdef12"/>
+    <property name="jux.git_branch" value="feature/user-auth"/>
+    <property name="jux.git_status" value="dirty"/>
+    <property name="jux.ci_provider" value="jenkins"/>
+    <property name="jux.ci_build_id" value="5678"/>
+    <property name="jux.ci_build_url" value="https://jenkins.example.com/job/acme-webapp/5678/"/>
+    <!-- Tool versions -->
+    <property name="jux.tool.pytest" value="8.0.0"/>
+    <property name="jux.tool.pytest-cov" value="4.1.0"/>
+  </properties>
+  <testsuite name="MathTests" tests="4" failures="1" errors="0" skipped="0" time="0.523" timestamp="2026-01-20T10:30:00" hostname="build-server" id="0" package="com.example.math">
+    <properties>
+      <property name="os.name" value="Linux"/>
+      <property name="java.version" value="17.0.1"/>
+    </properties>
+    <testcase name="test_addition" classname="com.example.math.CalculatorTest" time="0.125">
+      <system-out>Testing 2 + 2 = 4</system-out>
+    </testcase>
+    <testcase name="test_subtraction" classname="com.example.math.CalculatorTest" time="0.098"/>
+    <testcase name="test_division" classname="com.example.math.CalculatorTest" time="0.156">
+      <failure message="AssertionError: Expected 2.5 but got 2" type="AssertionError">
+Traceback (most recent call last):
+  File "test_math.py", line 25, in test_division
+    assert divide(5, 2) == 2.5
+AssertionError: Expected 2.5 but got 2
+      </failure>
+    </testcase>
+    <testcase name="test_multiplication" classname="com.example.math.CalculatorTest" time="0.144"/>
+    <system-out>Suite setup completed</system-out>
+    <system-err>Warning: Using deprecated calculator API</system-err>
+  </testsuite>
+  <testsuite name="StringTests" tests="4" failures="1" errors="1" skipped="1" time="1.000" timestamp="2026-01-20T10:30:01" hostname="build-server" id="1" package="com.example.string">
+    <testcase name="test_concatenation" classname="com.example.string.StringUtilsTest" time="0.234"/>
+    <testcase name="test_split" classname="com.example.string.StringUtilsTest" time="0.312">
+      <failure message="Expected 3 parts but got 2" type="AssertionError">
+java.lang.AssertionError: Expected 3 parts but got 2
+	at com.example.string.StringUtilsTest.test_split(StringUtilsTest.java:45)
+      </failure>
+    </testcase>
+    <testcase name="test_null_handling" classname="com.example.string.StringUtilsTest" time="0.189">
+      <error message="NullPointerException" type="java.lang.NullPointerException">
+java.lang.NullPointerException: Cannot invoke method on null
+	at com.example.string.StringUtils.process(StringUtils.java:23)
+	at com.example.string.StringUtilsTest.test_null_handling(StringUtilsTest.java:52)
+      </error>
+    </testcase>
+    <testcase name="test_unicode" classname="com.example.string.StringUtilsTest" time="0.000">
+      <skipped message="Unicode support not yet implemented"/>
+    </testcase>
+  </testsuite>
+</testsuites>

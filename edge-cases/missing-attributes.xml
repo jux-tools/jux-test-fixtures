@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MinimalAttributes">
+  <testcase name="test_minimal"/>
+  <testcase name="test_with_classname" classname="SomeClass"/>
+  <testcase name="test_with_time" time="0.123"/>
+  <testcase name="test_failure_minimal">
+    <failure/>
+  </testcase>
+  <testcase name="test_error_minimal">
+    <error/>
+  </testcase>
+  <testcase name="test_skipped_minimal">
+    <skipped/>
+  </testcase>
+</testsuite>

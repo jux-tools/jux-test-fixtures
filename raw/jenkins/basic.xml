@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Jenkins Build Tests" tests="4" failures="0" errors="0" skipped="0" time="12.345" timestamp="2026-01-20T10:30:00" hostname="jenkins-agent-01">
+  <properties>
+    <property name="BUILD_NUMBER" value="1234"/>
+    <property name="BUILD_URL" value="https://jenkins.example.com/job/my-project/1234/"/>
+    <property name="GIT_COMMIT" value="abc123def456789"/>
+    <property name="GIT_BRANCH" value="origin/main"/>
+  </properties>
+  <testcase name="testBuildCompilation" classname="com.example.BuildTest" time="5.234"/>
+  <testcase name="testUnitTests" classname="com.example.BuildTest" time="3.456"/>
+  <testcase name="testIntegrationTests" classname="com.example.BuildTest" time="2.345"/>
+  <testcase name="testCodeAnalysis" classname="com.example.BuildTest" time="1.310"/>
+</testsuite>

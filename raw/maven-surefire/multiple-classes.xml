@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="com.example.math.AdditionTest" time="0.156" tests="3" errors="0" skipped="0" failures="0">
+    <properties>
+      <property name="java.version" value="17.0.1"/>
+    </properties>
+    <testcase name="testPositiveNumbers" classname="com.example.math.AdditionTest" time="0.045"/>
+    <testcase name="testNegativeNumbers" classname="com.example.math.AdditionTest" time="0.056"/>
+    <testcase name="testZero" classname="com.example.math.AdditionTest" time="0.055"/>
+  </testsuite>
+  <testsuite name="com.example.math.SubtractionTest" time="0.134" tests="3" errors="0" skipped="0" failures="0">
+    <properties>
+      <property name="java.version" value="17.0.1"/>
+    </properties>
+    <testcase name="testPositiveNumbers" classname="com.example.math.SubtractionTest" time="0.034"/>
+    <testcase name="testNegativeNumbers" classname="com.example.math.SubtractionTest" time="0.045"/>
+    <testcase name="testZero" classname="com.example.math.SubtractionTest" time="0.055"/>
+  </testsuite>
+  <testsuite name="com.example.math.DivisionTest" time="0.189" tests="4" errors="0" skipped="0" failures="1">
+    <properties>
+      <property name="java.version" value="17.0.1"/>
+    </properties>
+    <testcase name="testPositiveNumbers" classname="com.example.math.DivisionTest" time="0.045"/>
+    <testcase name="testNegativeNumbers" classname="com.example.math.DivisionTest" time="0.034"/>
+    <testcase name="testByZero" classname="com.example.math.DivisionTest" time="0.067">
+      <failure message="Expected ArithmeticException" type="java.lang.AssertionError">java.lang.AssertionError: Expected ArithmeticException
+	at com.example.math.DivisionTest.testByZero(DivisionTest.java:25)</failure>
+    </testcase>
+    <testcase name="testFractions" classname="com.example.math.DivisionTest" time="0.043"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ZeroTestsSuite" tests="0" failures="0" errors="0" skipped="0" time="0.001" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <property name="reason" value="No tests collected"/>
+    <property name="filter" value="--ignore=all"/>
+  </properties>
+  <system-out>Test collection completed with 0 items</system-out>
+</testsuite>

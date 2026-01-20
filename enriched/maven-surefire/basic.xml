@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.CalculatorTest" time="0.234" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <!-- Standard Java properties -->
+    <property name="java.version" value="17.0.1"/>
+    <property name="os.name" value="Linux"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="surefire.version" value="3.2.5"/>
+    <!-- py-juxlib environment metadata -->
+    <property name="jux.hostname" value="maven-build-01"/>
+    <property name="jux.username" value="maven-ci"/>
+    <property name="jux.platform" value="Linux-5.15.0-x86_64"/>
+    <property name="jux.python_version" value="3.11.5"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="calculator-lib"/>
+    <property name="jux.git_commit" value="1234567890abcdef1234567890abcdef12345678"/>
+    <property name="jux.git_branch" value="main"/>
+    <property name="jux.git_status" value="clean"/>
+    <property name="jux.ci_provider" value="github"/>
+    <property name="jux.ci_build_id" value="54321"/>
+    <property name="jux.ci_build_url" value="https://github.com/example/calculator-lib/actions/runs/54321"/>
+  </properties>
+  <testcase name="testAddition" classname="com.example.CalculatorTest" time="0.056"/>
+  <testcase name="testSubtraction" classname="com.example.CalculatorTest" time="0.043"/>
+  <testcase name="testMultiplication" classname="com.example.CalculatorTest" time="0.067"/>
+  <testcase name="testDivision" classname="com.example.CalculatorTest" time="0.068"/>
+</testsuite>

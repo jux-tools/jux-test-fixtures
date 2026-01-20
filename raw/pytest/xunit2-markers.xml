@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="0" failures="0" skipped="2" tests="6" time="0.789" timestamp="2026-01-20T10:30:00" hostname="build-server">
+    <testcase classname="tests.test_integration" name="test_slow_operation" time="0.456">
+      <properties>
+        <property name="markers" value="slow, integration"/>
+      </properties>
+    </testcase>
+    <testcase classname="tests.test_integration" name="test_fast_operation" time="0.023">
+      <properties>
+        <property name="markers" value="fast"/>
+      </properties>
+    </testcase>
+    <testcase classname="tests.test_integration" name="test_network_call" time="0.234">
+      <properties>
+        <property name="markers" value="network, integration"/>
+      </properties>
+    </testcase>
+    <testcase classname="tests.test_integration" name="test_database_heavy" time="0.000">
+      <properties>
+        <property name="markers" value="slow, database"/>
+      </properties>
+      <skipped type="pytest.skip" message="Skipped: Database not available"/>
+    </testcase>
+    <testcase classname="tests.test_integration" name="test_smoke" time="0.076">
+      <properties>
+        <property name="markers" value="smoke"/>
+      </properties>
+    </testcase>
+    <testcase classname="tests.test_integration" name="test_windows_only" time="0.000">
+      <properties>
+        <property name="markers" value="skipif"/>
+      </properties>
+      <skipped type="pytest.skip" message="Skipped: Requires Windows"/>
+    </testcase>
+  </testsuite>
+</testsuites>

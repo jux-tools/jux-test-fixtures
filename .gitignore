@@ -1,0 +1,20 @@
+# Local/private configuration
+CLAUDE.local.md
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Generated signing keys (for testing only)
+*.pem
+*.key
+!scripts/*.pem.example
+
+# Python (if scripts use Python)
+__pycache__/
+*.pyc
+.venv/

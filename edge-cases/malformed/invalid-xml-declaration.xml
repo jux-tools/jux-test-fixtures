@@ -1,0 +1,4 @@
+<?xml version="2.0" encoding="UTF-8"?>
+<testsuite name="InvalidDeclaration" tests="1">
+  <testcase name="test_example"/>
+</testsuite>

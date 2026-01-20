@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="0.234" timestamp="2026-01-20T10:30:00" hostname="build-server">
+  <properties>
+    <property name="Python" value="3.12.1"/>
+    <property name="Platform" value="Linux-6.1.0-x86_64"/>
+    <property name="Packages" value="pytest-8.0.0, pytest-cov-4.1.0"/>
+  </properties>
+  <testcase classname="tests.test_config" name="test_load_config" file="tests/test_config.py" line="8" time="0.089">
+    <properties>
+      <property name="config_file" value="test.yaml"/>
+    </properties>
+  </testcase>
+  <testcase classname="tests.test_config" name="test_save_config" file="tests/test_config.py" line="15" time="0.076"/>
+  <testcase classname="tests.test_config" name="test_validate_config" file="tests/test_config.py" line="22" time="0.069"/>
+</testsuite>

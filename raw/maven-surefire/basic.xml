@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.CalculatorTest" time="0.234" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.version" value="17.0.1"/>
+    <property name="os.name" value="Linux"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="surefire.version" value="3.2.5"/>
+  </properties>
+  <testcase name="testAddition" classname="com.example.CalculatorTest" time="0.056"/>
+  <testcase name="testSubtraction" classname="com.example.CalculatorTest" time="0.043"/>
+  <testcase name="testMultiplication" classname="com.example.CalculatorTest" time="0.067"/>
+  <testcase name="testDivision" classname="com.example.CalculatorTest" time="0.068"/>
+</testsuite>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.ParameterizedTest" time="0.456" tests="6" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.version" value="17.0.1"/>
+    <property name="junit.jupiter.version" value="5.10.0"/>
+  </properties>
+  <testcase name="testIsEven[1: value=2]" classname="com.example.ParameterizedTest" time="0.067"/>
+  <testcase name="testIsEven[2: value=4]" classname="com.example.ParameterizedTest" time="0.045"/>
+  <testcase name="testIsEven[3: value=6]" classname="com.example.ParameterizedTest" time="0.056"/>
+  <testcase name="testIsOdd[1: value=1]" classname="com.example.ParameterizedTest" time="0.034"/>
+  <testcase name="testIsOdd[2: value=3]" classname="com.example.ParameterizedTest" time="0.045"/>
+  <testcase name="testIsOdd[3: value=4]" classname="com.example.ParameterizedTest" time="0.089">
+    <failure message="Expected odd number" type="org.opentest4j.AssertionFailedError">
+org.opentest4j.AssertionFailedError: Expected odd number
+	at com.example.ParameterizedTest.testIsOdd(ParameterizedTest.java:34)
+    </failure>
+  </testcase>
+</testsuite>

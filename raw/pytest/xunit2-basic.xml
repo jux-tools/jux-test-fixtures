@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="0" failures="1" skipped="1" tests="5" time="0.567" timestamp="2026-01-20T10:30:00" hostname="build-server">
+    <testcase classname="tests.test_api" name="test_get_users" time="0.145">
+      <system-out>GET /api/users - 200 OK</system-out>
+    </testcase>
+    <testcase classname="tests.test_api" name="test_create_user" time="0.189">
+      <system-out>POST /api/users - 201 Created</system-out>
+    </testcase>
+    <testcase classname="tests.test_api" name="test_update_user" time="0.167">
+      <failure message="AssertionError: assert 404 == 200&#10;&#10;where 404 = response.status_code">
+def test_update_user(client):
+    response = client.put("/api/users/999", json={"name": "Updated"})
+>   assert response.status_code == 200
+E   AssertionError: assert 404 == 200
+E     where 404 = response.status_code
+
+tests/test_api.py:35: AssertionError
+      </failure>
+      <system-out>PUT /api/users/999 - 404 Not Found</system-out>
+    </testcase>
+    <testcase classname="tests.test_api" name="test_delete_user" time="0.000">
+      <skipped type="pytest.skip" message="Delete endpoint disabled in test environment"/>
+    </testcase>
+    <testcase classname="tests.test_api" name="test_list_users" time="0.066"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Jenkins Build Tests" tests="4" failures="0" errors="0" skipped="0" time="12.345" timestamp="2026-01-20T10:30:00" hostname="jenkins-agent-01">
+  <properties>
+    <!-- Jenkins build properties -->
+    <property name="BUILD_NUMBER" value="1234"/>
+    <property name="BUILD_URL" value="https://jenkins.example.com/job/my-project/1234/"/>
+    <property name="GIT_COMMIT" value="abc123def456789"/>
+    <property name="GIT_BRANCH" value="origin/main"/>
+    <!-- py-juxlib environment metadata -->
+    <property name="jux.hostname" value="jenkins-agent-01"/>
+    <property name="jux.username" value="jenkins"/>
+    <property name="jux.platform" value="Linux-5.4.0-x86_64"/>
+    <property name="jux.python_version" value="3.10.12"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="my-project"/>
+    <property name="jux.git_commit" value="abc123def456789012345678901234567890abcd"/>
+    <property name="jux.git_branch" value="main"/>
+    <property name="jux.git_status" value="clean"/>
+    <property name="jux.ci_provider" value="jenkins"/>
+    <property name="jux.ci_build_id" value="1234"/>
+    <property name="jux.ci_build_url" value="https://jenkins.example.com/job/my-project/1234/"/>
+  </properties>
+  <testcase name="testBuildCompilation" classname="com.example.BuildTest" time="5.234"/>
+  <testcase name="testUnitTests" classname="com.example.BuildTest" time="3.456"/>
+  <testcase name="testIntegrationTests" classname="com.example.BuildTest" time="2.345"/>
+  <testcase name="testCodeAnalysis" classname="com.example.BuildTest" time="1.310"/>
+</testsuite>

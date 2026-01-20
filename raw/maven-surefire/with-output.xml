@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.OutputTest" time="0.345" tests="3" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.version" value="17.0.1"/>
+  </properties>
+  <testcase name="testWithStdout" classname="com.example.OutputTest" time="0.089">
+    <system-out><![CDATA[Starting test...
+Processing item 1
+Processing item 2
+Processing item 3
+Test completed successfully
+]]></system-out>
+  </testcase>
+  <testcase name="testWithStderr" classname="com.example.OutputTest" time="0.123">
+    <system-err><![CDATA[WARNING: Deprecated API usage detected
+WARNING: Consider using the new API
+]]></system-err>
+  </testcase>
+  <testcase name="testWithBothOutputs" classname="com.example.OutputTest" time="0.133">
+    <system-out><![CDATA[Normal output: Starting operation
+Normal output: Operation completed
+]]></system-out>
+    <system-err><![CDATA[Debug: Internal state changed
+]]></system-err>
+  </testcase>
+</testsuite>

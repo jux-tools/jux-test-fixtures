@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="User Management Feature" tests="4" failures="0" errors="0" skipped="1" time="3.456" timestamp="2026-01-20T10:30:00">
+  <testcase name="Scenario: Create new user" classname="User Management Feature" time="0.987">
+    <properties>
+      <property name="tags" value="@smoke, @crud, @users"/>
+    </properties>
+    <system-out><![CDATA[
+Given the admin user is logged in
+When the admin creates a new user with name "John Doe"
+Then the user should appear in the user list
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Update user details" classname="User Management Feature" time="0.876">
+    <properties>
+      <property name="tags" value="@crud, @users"/>
+    </properties>
+    <system-out><![CDATA[
+Given a user "John Doe" exists
+When the admin updates the user email to "john.new@example.com"
+Then the user details should be updated
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Delete user" classname="User Management Feature" time="0.765">
+    <properties>
+      <property name="tags" value="@crud, @users, @destructive"/>
+    </properties>
+    <system-out><![CDATA[
+Given a user "John Doe" exists
+When the admin deletes the user
+Then the user should not appear in the user list
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Bulk import users" classname="User Management Feature" time="0.000">
+    <properties>
+      <property name="tags" value="@wip, @users, @bulk"/>
+    </properties>
+    <skipped message="@wip: Work in progress"/>
+  </testcase>
+</testsuite>

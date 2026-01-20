@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MixedResultsTests" tests="8" failures="2" errors="1" skipped="1" time="1.234" timestamp="2026-01-20T10:30:00">
+  <testcase name="test_pass_1" classname="tests.test_mixed" time="0.089"/>
+  <testcase name="test_pass_2" classname="tests.test_mixed" time="0.134"/>
+  <testcase name="test_failure_1" classname="tests.test_mixed" time="0.156">
+    <failure message="Expected True" type="AssertionError">AssertionError: Expected True</failure>
+  </testcase>
+  <testcase name="test_pass_3" classname="tests.test_mixed" time="0.098"/>
+  <testcase name="test_error_1" classname="tests.test_mixed" time="0.212">
+    <error message="ValueError: Invalid input" type="ValueError">ValueError: Invalid input</error>
+  </testcase>
+  <testcase name="test_skipped_1" classname="tests.test_mixed" time="0.000">
+    <skipped message="Not applicable"/>
+  </testcase>
+  <testcase name="test_failure_2" classname="tests.test_mixed" time="0.189">
+    <failure message="Assertion failed" type="AssertionError">Assertion failed</failure>
+  </testcase>
+  <testcase name="test_pass_4" classname="tests.test_mixed" time="0.356"/>
+</testsuite>

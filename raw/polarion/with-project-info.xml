@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <properties>
+    <property name="polarion-project-id" value="ACME"/>
+    <property name="polarion-testrun-id" value="TR-ACME-2026-Q1-001"/>
+    <property name="polarion-testrun-title" value="Q1 2026 Integration Tests"/>
+    <property name="polarion-testrun-type-id" value="integrationTest"/>
+    <property name="polarion-testrun-template-id" value="CI-Regression"/>
+    <property name="polarion-user-id" value="ci-bot"/>
+    <property name="polarion-response-field" value="testRun"/>
+    <property name="polarion-custom-build" value="build-12345"/>
+    <property name="polarion-custom-environment" value="staging"/>
+  </properties>
+  <testsuite name="IntegrationTests" tests="6" failures="1" errors="0" skipped="0" time="15.678" timestamp="2026-01-20T10:30:00">
+    <testcase name="test_api_authentication" classname="tests.integration.ApiTest" time="2.345">
+      <properties>
+        <property name="polarion-testcase-id" value="TC-INT-001"/>
+        <property name="polarion-custom-component" value="API"/>
+      </properties>
+    </testcase>
+    <testcase name="test_database_connectivity" classname="tests.integration.DatabaseTest" time="1.234">
+      <properties>
+        <property name="polarion-testcase-id" value="TC-INT-002"/>
+        <property name="polarion-custom-component" value="Database"/>
+      </properties>
+    </testcase>
+    <testcase name="test_message_queue" classname="tests.integration.MessagingTest" time="3.456">
+      <properties>
+        <property name="polarion-testcase-id" value="TC-INT-003"/>
+        <property name="polarion-custom-component" value="Messaging"/>
+      </properties>
+    </testcase>
+    <testcase name="test_cache_layer" classname="tests.integration.CacheTest" time="2.567">
+      <properties>
+        <property name="polarion-testcase-id" value="TC-INT-004"/>
+        <property name="polarion-custom-component" value="Cache"/>
+      </properties>
+      <failure message="Cache miss rate exceeded threshold" type="AssertionError">
+AssertionError: Cache miss rate 15% exceeds threshold 10%
+      </failure>
+    </testcase>
+    <testcase name="test_file_storage" classname="tests.integration.StorageTest" time="4.567">
+      <properties>
+        <property name="polarion-testcase-id" value="TC-INT-005"/>
+        <property name="polarion-custom-component" value="Storage"/>
+      </properties>
+    </testcase>
+    <testcase name="test_external_service" classname="tests.integration.ExternalTest" time="1.509">
+      <properties>
+        <property name="polarion-testcase-id" value="TC-INT-006"/>
+        <property name="polarion-custom-component" value="External"/>
+      </properties>
+    </testcase>
+  </testsuite>
+</testsuites>

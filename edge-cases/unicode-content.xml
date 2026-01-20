@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Unicode测试套件" tests="5" failures="1" errors="0" skipped="0" time="0.567" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <property name="description" value="Tests with Unicode characters: 日本語, العربية, עברית, Ελληνικά"/>
+  </properties>
+  <testcase name="test_chinese_日文テスト" classname="tests.test_unicode.中文Test" time="0.089"/>
+  <testcase name="test_arabic_اختبار" classname="tests.test_unicode.ArabicTest" time="0.076"/>
+  <testcase name="test_emoji_🎉🚀✨" classname="tests.test_unicode.EmojiTest" time="0.098"/>
+  <testcase name="test_special_chars_äöü_ñ_ß" classname="tests.test_unicode.SpecialCharsTest" time="0.112"/>
+  <testcase name="test_cyrillic_кириллица" classname="tests.test_unicode.CyrillicTest" time="0.192">
+    <failure message="Ошибка: Ожидалось значение 'привет'" type="AssertionError">
+AssertionError: Ожидалось значение 'привет', получено 'пока'
+Expected: 'привет' (hello)
+Got: 'пока' (bye)
+    </failure>
+  </testcase>
+</testsuite>

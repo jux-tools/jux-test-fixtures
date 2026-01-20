@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="E-Commerce Application" tests="8" failures="1" errors="0" skipped="1" time="8.765">
+  <testsuite name="Product Catalog Feature" tests="3" failures="0" errors="0" skipped="0" time="2.345">
+    <testcase name="Scenario: View product list" classname="Product Catalog Feature" time="0.567">
+      <system-out>Given products exist in the catalog...</system-out>
+    </testcase>
+    <testcase name="Scenario: Search for products" classname="Product Catalog Feature" time="0.789">
+      <system-out>Given the user is on the catalog page...</system-out>
+    </testcase>
+    <testcase name="Scenario: Filter products by category" classname="Product Catalog Feature" time="0.989">
+      <system-out>Given products with categories exist...</system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="Shopping Cart Feature" tests="3" failures="1" errors="0" skipped="0" time="3.456">
+    <testcase name="Scenario: Add item to cart" classname="Shopping Cart Feature" time="0.876">
+      <system-out>Given a product exists...</system-out>
+    </testcase>
+    <testcase name="Scenario: Remove item from cart" classname="Shopping Cart Feature" time="0.765">
+      <system-out>Given the cart contains an item...</system-out>
+    </testcase>
+    <testcase name="Scenario: Update item quantity" classname="Shopping Cart Feature" time="1.815">
+      <failure message="Cart total not updated correctly" type="AssertionError">
+Step failed: Then the cart total should be updated
+Expected: $59.98
+Got: $29.99
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Checkout Feature" tests="2" failures="0" errors="0" skipped="1" time="2.964">
+    <testcase name="Scenario: Complete checkout with credit card" classname="Checkout Feature" time="2.964">
+      <system-out>Given items are in the cart...</system-out>
+    </testcase>
+    <testcase name="Scenario: Complete checkout with PayPal" classname="Checkout Feature" time="0.000">
+      <skipped message="PayPal integration pending"/>
+    </testcase>
+  </testsuite>
+</testsuites>

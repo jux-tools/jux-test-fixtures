@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="RootSuites" tests="9" failures="1" errors="0" skipped="1" time="3.456">
+  <testsuite name="Level1-A" tests="4" failures="0" errors="0" skipped="0" time="1.234">
+    <testsuite name="Level2-A1" tests="2" failures="0" errors="0" skipped="0" time="0.567">
+      <testcase name="test_deeply_nested_1" classname="Level1-A.Level2-A1" time="0.234"/>
+      <testcase name="test_deeply_nested_2" classname="Level1-A.Level2-A1" time="0.333"/>
+    </testsuite>
+    <testsuite name="Level2-A2" tests="2" failures="0" errors="0" skipped="0" time="0.667">
+      <testcase name="test_deeply_nested_3" classname="Level1-A.Level2-A2" time="0.345"/>
+      <testcase name="test_deeply_nested_4" classname="Level1-A.Level2-A2" time="0.322"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="Level1-B" tests="5" failures="1" errors="0" skipped="1" time="2.222">
+    <testsuite name="Level2-B1" tests="3" failures="1" errors="0" skipped="0" time="1.234">
+      <testsuite name="Level3-B1a" tests="3" failures="1" errors="0" skipped="0" time="1.234">
+        <testcase name="test_very_deeply_nested_1" classname="Level1-B.Level2-B1.Level3-B1a" time="0.456"/>
+        <testcase name="test_very_deeply_nested_2" classname="Level1-B.Level2-B1.Level3-B1a" time="0.389">
+          <failure message="Deep failure" type="AssertionError">Deep failure at level 3</failure>
+        </testcase>
+        <testcase name="test_very_deeply_nested_3" classname="Level1-B.Level2-B1.Level3-B1a" time="0.389"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Level2-B2" tests="2" failures="0" errors="0" skipped="1" time="0.988">
+      <testcase name="test_another_nested" classname="Level1-B.Level2-B2" time="0.988"/>
+      <testcase name="test_skipped_nested" classname="Level1-B.Level2-B2" time="0.000">
+        <skipped message="Skipped in nested suite"/>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LargePropertiesTest" tests="2" failures="0" errors="0" skipped="0" time="0.234" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <property name="prop1" value="value1"/>
+    <property name="prop2" value="value2"/>
+    <property name="prop3" value="value3"/>
+    <property name="prop4" value="value4"/>
+    <property name="prop5" value="value5"/>
+    <property name="prop6" value="value6"/>
+    <property name="prop7" value="value7"/>
+    <property name="prop8" value="value8"/>
+    <property name="prop9" value="value9"/>
+    <property name="prop10" value="value10"/>
+    <property name="prop11" value="value11"/>
+    <property name="prop12" value="value12"/>
+    <property name="prop13" value="value13"/>
+    <property name="prop14" value="value14"/>
+    <property name="prop15" value="value15"/>
+    <property name="prop16" value="value16"/>
+    <property name="prop17" value="value17"/>
+    <property name="prop18" value="value18"/>
+    <property name="prop19" value="value19"/>
+    <property name="prop20" value="value20"/>
+    <property name="long_value" value="This is a very long property value that contains a lot of text to test how the parser handles long values. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+    <property name="multiline_escaped" value="Line 1&#10;Line 2&#10;Line 3&#10;Line 4"/>
+    <property name="json_value" value="{&quot;key&quot;: &quot;value&quot;, &quot;nested&quot;: {&quot;a&quot;: 1, &quot;b&quot;: 2}}"/>
+  </properties>
+  <testcase name="test_with_many_properties" classname="tests.test_large" time="0.123">
+    <properties>
+      <property name="tc_prop1" value="tc_value1"/>
+      <property name="tc_prop2" value="tc_value2"/>
+      <property name="tc_prop3" value="tc_value3"/>
+      <property name="tc_prop4" value="tc_value4"/>
+      <property name="tc_prop5" value="tc_value5"/>
+    </properties>
+  </testcase>
+  <testcase name="test_another" classname="tests.test_large" time="0.111"/>
+</testsuite>

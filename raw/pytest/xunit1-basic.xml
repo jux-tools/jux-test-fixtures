@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite name="pytest" errors="0" failures="1" skipped="1" tests="5" time="0.456" timestamp="2026-01-20T10:30:00" hostname="build-server">
+  <testcase classname="tests.test_calculator" name="test_add" file="tests/test_calculator.py" line="5" time="0.089"/>
+  <testcase classname="tests.test_calculator" name="test_subtract" file="tests/test_calculator.py" line="10" time="0.076"/>
+  <testcase classname="tests.test_calculator" name="test_multiply" file="tests/test_calculator.py" line="15" time="0.092"/>
+  <testcase classname="tests.test_calculator" name="test_divide" file="tests/test_calculator.py" line="20" time="0.123">
+    <failure message="AssertionError: assert 2 == 2.5">tests/test_calculator.py:22: AssertionError</failure>
+  </testcase>
+  <testcase classname="tests.test_calculator" name="test_power" file="tests/test_calculator.py" line="25" time="0.000">
+    <skipped type="pytest.skip" message="Power function not implemented"/>
+  </testcase>
+</testsuite>
