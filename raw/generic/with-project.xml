@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ProjectTests" tests="3" failures="0" errors="0" skipped="0" time="0.234" timestamp="2026-01-20T10:30:00" hostname="build-server">
+  <properties>
+    <property name="project" value="acme-webapp"/>
+    <property name="build.number" value="1234"/>
+    <property name="environment" value="ci"/>
+  </properties>
+  <testcase name="test_login" classname="tests.test_auth" time="0.089"/>
+  <testcase name="test_logout" classname="tests.test_auth" time="0.067"/>
+  <testcase name="test_session_timeout" classname="tests.test_auth" time="0.078"/>
+</testsuite>

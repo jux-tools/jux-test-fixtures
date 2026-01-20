@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DuplicateProject" tests="2" failures="0" errors="0" skipped="0" time="0.123" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <property name="project" value="first-project"/>
+    <property name="project" value="second-project"/>
+    <property name="note" value="Duplicate property names"/>
+  </properties>
+  <testcase name="test_duplicate_handling" classname="tests.test_edge" time="0.056"/>
+  <testcase name="test_which_wins" classname="tests.test_edge" time="0.067"/>
+</testsuite>

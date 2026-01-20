@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="RootSuites" tests="4" failures="0" errors="0" skipped="0" time="0.456">
+  <properties>
+    <property name="project" value="root-project"/>
+  </properties>
+  <testsuite name="Level1Suite" tests="2" failures="0" errors="0" skipped="0" time="0.234">
+    <properties>
+      <property name="project" value="level1-project"/>
+    </properties>
+    <testsuite name="Level2Suite" tests="2" failures="0" errors="0" skipped="0" time="0.234">
+      <properties>
+        <property name="project" value="level2-project"/>
+      </properties>
+      <testcase name="test_deep_nesting" classname="tests.nested" time="0.123"/>
+      <testcase name="test_project_inheritance" classname="tests.nested" time="0.111"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="AnotherLevel1" tests="2" failures="0" errors="0" skipped="0" time="0.222">
+    <testcase name="test_sibling" classname="tests.sibling" time="0.111"/>
+    <testcase name="test_no_override" classname="tests.sibling" time="0.111"/>
+  </testsuite>
+</testsuites>

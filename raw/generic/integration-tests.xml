@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="IntegrationTests" tests="7" failures="0" errors="0" skipped="2" time="8.901" timestamp="2026-01-20T10:30:00">
+  <testsuite name="ExternalServiceTests" tests="4" failures="0" errors="0" skipped="1" time="5.234" hostname="integration-runner">
+    <properties>
+      <property name="project" value="notification-hub"/>
+      <property name="test.type" value="integration"/>
+      <property name="mock.services" value="false"/>
+    </properties>
+    <testcase name="test_email_delivery" classname="tests.integration.test_email" time="1.234"/>
+    <testcase name="test_sms_delivery" classname="tests.integration.test_sms" time="2.345"/>
+    <testcase name="test_push_notification" classname="tests.integration.test_push" time="1.655"/>
+    <testcase name="test_slack_webhook" classname="tests.integration.test_slack" time="0.000">
+      <skipped message="Slack integration disabled in CI"/>
+    </testcase>
+  </testsuite>
+  <testsuite name="MessageQueueTests" tests="3" failures="0" errors="0" skipped="1" time="3.667" hostname="integration-runner">
+    <properties>
+      <property name="project" value="notification-hub"/>
+      <property name="queue.type" value="rabbitmq"/>
+    </properties>
+    <testcase name="test_publish_message" classname="tests.integration.test_queue" time="0.987"/>
+    <testcase name="test_consume_message" classname="tests.integration.test_queue" time="1.234"/>
+    <testcase name="test_dead_letter_queue" classname="tests.integration.test_queue" time="0.000">
+      <skipped message="DLQ not configured"/>
+    </testcase>
+  </testsuite>
+</testsuites>

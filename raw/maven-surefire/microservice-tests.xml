@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.microservice.ServiceTests" tests="6" failures="0" errors="1" skipped="1" time="3.456" timestamp="2026-01-20T10:30:00" hostname="k8s-runner-pod-abc123">
+  <properties>
+    <property name="project" value="order-microservice"/>
+    <property name="java.version" value="17.0.9"/>
+    <property name="os.name" value="Linux"/>
+    <property name="kubernetes.namespace" value="test"/>
+  </properties>
+  <testcase name="testCreateOrder" classname="com.example.microservice.OrderServiceTest" time="0.567"/>
+  <testcase name="testGetOrder" classname="com.example.microservice.OrderServiceTest" time="0.234"/>
+  <testcase name="testUpdateOrder" classname="com.example.microservice.OrderServiceTest" time="0.345"/>
+  <testcase name="testCancelOrder" classname="com.example.microservice.OrderServiceTest" time="0.456"/>
+  <testcase name="testKafkaPublish" classname="com.example.microservice.KafkaTest" time="0.789">
+    <error message="KafkaException: Broker not available" type="org.apache.kafka.common.KafkaException">
+org.apache.kafka.common.KafkaException: Broker not available
+	at com.example.microservice.KafkaTest.testKafkaPublish(KafkaTest.java:32)
+    </error>
+  </testcase>
+  <testcase name="testKafkaConsume" classname="com.example.microservice.KafkaTest" time="0.000">
+    <skipped message="Depends on testKafkaPublish"/>
+  </testcase>
+  <system-out>
+OrderService initialized
+Database connection established
+Kafka producer created
+  </system-out>
+</testsuite>

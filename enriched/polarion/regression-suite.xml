@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RegressionSuite" tests="6" failures="1" errors="0" skipped="0" time="12.345" timestamp="2026-01-20T10:30:00" hostname="polarion-runner">
+  <properties>
+    <property name="project" value="enterprise-portal"/>
+    <property name="polarion-project-id" value="PORTAL"/>
+    <property name="polarion-testrun-id" value="REG-2026-01"/>
+    <property name="polarion-testrun-title" value="January Regression"/>
+    <property name="polarion-user-id" value="ci-automation"/>
+    <property name="jux.hostname" value="polarion-runner"/>
+    <property name="jux.username" value="test-automation"/>
+    <property name="jux.platform" value="Linux-6.1.0-x86_64"/>
+    <property name="jux.python_version" value="3.11.7"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="enterprise-portal"/>
+    <property name="jux.git_commit" value="portal123456789012345678901234567890ab"/>
+    <property name="jux.git_branch" value="main"/>
+    <property name="jux.git_status" value="clean"/>
+    <property name="jux.ci_provider" value="azure-devops"/>
+    <property name="jux.ci_build_id" value="ADO-789"/>
+  </properties>
+  <testcase name="test_user_login" classname="tests.regression.test_auth">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-001"/>
+    </properties>
+  </testcase>
+  <testcase name="test_dashboard_load" classname="tests.regression.test_dashboard">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-002"/>
+    </properties>
+  </testcase>
+  <testcase name="test_report_generation" classname="tests.regression.test_reports">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-003"/>
+    </properties>
+    <failure message="Report generation timed out">
+TimeoutError: Report generation exceeded 30s limit
+    </failure>
+  </testcase>
+  <testcase name="test_export_csv" classname="tests.regression.test_export">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-004"/>
+    </properties>
+  </testcase>
+  <testcase name="test_export_pdf" classname="tests.regression.test_export">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-005"/>
+    </properties>
+  </testcase>
+  <testcase name="test_user_logout" classname="tests.regression.test_auth">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-006"/>
+    </properties>
+  </testcase>
+</testsuite>

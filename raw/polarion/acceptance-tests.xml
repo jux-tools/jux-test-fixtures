@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AcceptanceTests" tests="5" failures="0" errors="0" skipped="1" time="8.765" timestamp="2026-01-20T10:30:00" hostname="uat-runner">
+  <properties>
+    <property name="project" value="billing-system"/>
+    <property name="polarion-project-id" value="BILLING"/>
+    <property name="polarion-testrun-id" value="UAT-2026-Q1"/>
+    <property name="polarion-testrun-title" value="Q1 UAT Acceptance"/>
+    <property name="polarion-response-id" value="acceptance"/>
+  </properties>
+  <testcase name="test_invoice_creation" classname="tests.acceptance.test_invoices" time="1.234">
+    <properties>
+      <property name="polarion-testcase-id" value="BILLING-AC-001"/>
+      <property name="requirement" value="REQ-INV-001"/>
+    </properties>
+  </testcase>
+  <testcase name="test_payment_processing" classname="tests.acceptance.test_payments" time="2.345">
+    <properties>
+      <property name="polarion-testcase-id" value="BILLING-AC-002"/>
+      <property name="requirement" value="REQ-PAY-001"/>
+    </properties>
+  </testcase>
+  <testcase name="test_refund_processing" classname="tests.acceptance.test_payments" time="1.567">
+    <properties>
+      <property name="polarion-testcase-id" value="BILLING-AC-003"/>
+      <property name="requirement" value="REQ-PAY-002"/>
+    </properties>
+  </testcase>
+  <testcase name="test_recurring_billing" classname="tests.acceptance.test_subscriptions" time="2.789">
+    <properties>
+      <property name="polarion-testcase-id" value="BILLING-AC-004"/>
+      <property name="requirement" value="REQ-SUB-001"/>
+    </properties>
+  </testcase>
+  <testcase name="test_dunning_process" classname="tests.acceptance.test_dunning" time="0.000">
+    <properties>
+      <property name="polarion-testcase-id" value="BILLING-AC-005"/>
+    </properties>
+    <skipped message="Dunning feature not yet implemented"/>
+  </testcase>
+</testsuite>

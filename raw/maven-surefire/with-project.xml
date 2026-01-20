@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.inventory.InventoryServiceTest" tests="5" failures="0" errors="0" skipped="1" time="0.892" timestamp="2026-01-20T10:30:00" hostname="build-agent-02">
+  <properties>
+    <property name="project" value="inventory-management"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="os.name" value="Linux"/>
+    <property name="maven.version" value="3.9.6"/>
+    <property name="surefire.version" value="3.2.5"/>
+  </properties>
+  <testcase name="testAddItem" classname="com.example.inventory.InventoryServiceTest" time="0.234"/>
+  <testcase name="testRemoveItem" classname="com.example.inventory.InventoryServiceTest" time="0.178"/>
+  <testcase name="testUpdateQuantity" classname="com.example.inventory.InventoryServiceTest" time="0.156"/>
+  <testcase name="testGetStock" classname="com.example.inventory.InventoryServiceTest" time="0.189"/>
+  <testcase name="testBulkImport" classname="com.example.inventory.InventoryServiceTest" time="0.000">
+    <skipped message="Bulk import feature not yet implemented"/>
+  </testcase>
+  <system-out>InventoryService initialized with test database
+Processing 4 test items
+</system-out>
+</testsuite>

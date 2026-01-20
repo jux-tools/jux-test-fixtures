@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DatabaseTests" tests="6" failures="0" errors="1" skipped="0" time="2.567" timestamp="2026-01-20T10:30:00" hostname="db-test-runner">
+  <properties>
+    <property name="project" value="data-layer"/>
+    <property name="database" value="postgresql"/>
+    <property name="db.version" value="16.1"/>
+  </properties>
+  <testcase name="test_connection_pool" classname="tests.db.test_pool" time="0.456"/>
+  <testcase name="test_transaction_commit" classname="tests.db.test_transactions" time="0.534"/>
+  <testcase name="test_transaction_rollback" classname="tests.db.test_transactions" time="0.423"/>
+  <testcase name="test_deadlock_detection" classname="tests.db.test_transactions" time="0.678">
+    <error message="TimeoutError: Lock acquisition timed out" type="TimeoutError">
+TimeoutError: Lock acquisition timed out after 5000ms
+  at tests/db/test_transactions.py:89
+    </error>
+  </testcase>
+  <testcase name="test_query_optimization" classname="tests.db.test_queries" time="0.234"/>
+  <testcase name="test_index_usage" classname="tests.db.test_queries" time="0.242"/>
+</testsuite>

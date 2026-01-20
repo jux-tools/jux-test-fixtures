@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite name="pytest" errors="0" failures="2" skipped="0" tests="5" time="0.789" timestamp="2026-01-20T10:30:00" hostname="legacy-runner">
+  <properties>
+    <property name="project" value="legacy-adapter"/>
+    <property name="Python" value="3.9.18"/>
+    <property name="Platform" value="Linux-5.4.0-x86_64"/>
+  </properties>
+  <testcase classname="tests.test_legacy" name="test_xml_parser" time="0.123"/>
+  <testcase classname="tests.test_legacy" name="test_soap_client" time="0.234">
+    <failure message="AssertionError: SOAP response malformed">
+Expected valid XML response
+    </failure>
+  </testcase>
+  <testcase classname="tests.test_legacy" name="test_ftp_upload" time="0.189"/>
+  <testcase classname="tests.test_legacy" name="test_csv_import" time="0.145">
+    <failure message="UnicodeDecodeError: invalid encoding">
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80
+    </failure>
+  </testcase>
+  <testcase classname="tests.test_legacy" name="test_batch_job" time="0.098"/>
+</testsuite>

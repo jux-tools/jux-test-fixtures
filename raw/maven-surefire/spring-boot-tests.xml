@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.app.ApplicationTests" tests="8" failures="1" errors="0" skipped="0" time="5.678" timestamp="2026-01-20T10:30:00" hostname="spring-runner">
+  <properties>
+    <property name="project" value="spring-boot-app"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="spring.version" value="3.2.1"/>
+    <property name="os.name" value="Linux"/>
+  </properties>
+  <testcase name="contextLoads" classname="com.example.app.ApplicationTests" time="2.345"/>
+  <testcase name="testUserService" classname="com.example.app.service.UserServiceTest" time="0.456"/>
+  <testcase name="testUserRepository" classname="com.example.app.repository.UserRepositoryTest" time="0.567"/>
+  <testcase name="testUserController" classname="com.example.app.controller.UserControllerTest" time="0.678"/>
+  <testcase name="testAuthentication" classname="com.example.app.security.AuthenticationTest" time="0.789"/>
+  <testcase name="testAuthorization" classname="com.example.app.security.AuthorizationTest" time="0.234">
+    <failure message="Access denied for role USER" type="java.lang.AssertionError">
+java.lang.AssertionError: Expected role ADMIN to be required
+	at com.example.app.security.AuthorizationTest.testAuthorization(AuthorizationTest.java:45)
+    </failure>
+  </testcase>
+  <testcase name="testCaching" classname="com.example.app.cache.CacheTest" time="0.345"/>
+  <testcase name="testScheduledTask" classname="com.example.app.scheduler.SchedulerTest" time="0.264"/>
+</testsuite>

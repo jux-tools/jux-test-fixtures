@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PerformanceTests" tests="4" failures="1" errors="0" skipped="0" time="45.678" timestamp="2026-01-20T10:30:00" hostname="perf-runner-01">
+  <properties>
+    <property name="project" value="order-service"/>
+    <property name="test.type" value="load"/>
+    <property name="concurrent.users" value="100"/>
+  </properties>
+  <testcase name="test_response_time_p95" classname="tests.perf.test_latency" time="12.345"/>
+  <testcase name="test_throughput" classname="tests.perf.test_throughput" time="15.234"/>
+  <testcase name="test_memory_usage" classname="tests.perf.test_resources" time="8.456">
+    <failure message="Memory usage exceeded threshold">
+Peak memory: 512MB, Threshold: 256MB
+    </failure>
+  </testcase>
+  <testcase name="test_cpu_utilization" classname="tests.perf.test_resources" time="9.643"/>
+  <system-out>
+Load test completed
+Total requests: 10000
+Successful: 9856
+Failed: 144
+Average response time: 45ms
+P95 response time: 120ms
+  </system-out>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SpecialCharsProject" tests="2" failures="0" errors="0" skipped="0" time="0.123" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <property name="project" value="my-project_v2.0@test"/>
+    <property name="build.tag" value="release/1.0.0"/>
+  </properties>
+  <testcase name="test_special" classname="tests.test_edge" time="0.056"/>
+  <testcase name="test_chars" classname="tests.test_edge" time="0.067"/>
+</testsuite>

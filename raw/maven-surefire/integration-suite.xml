@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.integration.IntegrationSuite" tests="9" failures="0" errors="0" skipped="2" time="15.678" timestamp="2026-01-20T10:30:00" hostname="integration-pod">
+  <properties>
+    <property name="project" value="ecommerce-platform"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="test.profile" value="integration"/>
+    <property name="testcontainers.version" value="1.19.3"/>
+  </properties>
+  <testcase name="testProductCatalog" classname="com.example.integration.CatalogIT" time="2.345"/>
+  <testcase name="testShoppingCart" classname="com.example.integration.CartIT" time="1.567"/>
+  <testcase name="testCheckout" classname="com.example.integration.CheckoutIT" time="3.456"/>
+  <testcase name="testPaymentProcessing" classname="com.example.integration.PaymentIT" time="2.789"/>
+  <testcase name="testOrderConfirmation" classname="com.example.integration.OrderIT" time="1.234"/>
+  <testcase name="testInventoryUpdate" classname="com.example.integration.InventoryIT" time="1.567"/>
+  <testcase name="testEmailNotification" classname="com.example.integration.NotificationIT" time="0.890"/>
+  <testcase name="testSmsNotification" classname="com.example.integration.NotificationIT" time="0.000">
+    <skipped message="SMS gateway not configured in test"/>
+  </testcase>
+  <testcase name="testPushNotification" classname="com.example.integration.NotificationIT" time="0.000">
+    <skipped message="Push service not available"/>
+  </testcase>
+  <system-out>
+TestContainers started: PostgreSQL, Redis, Kafka
+All containers healthy
+Integration tests completed
+  </system-out>
+</testsuite>

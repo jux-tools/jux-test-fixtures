@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SmokeTests" tests="5" failures="0" errors="0" skipped="0" time="2.345" timestamp="2026-01-20T10:30:00" hostname="smoke-runner">
+  <properties>
+    <property name="project" value="production-app"/>
+    <property name="environment" value="production"/>
+    <property name="test.type" value="smoke"/>
+    <property name="jux.hostname" value="smoke-runner"/>
+    <property name="jux.username" value="monitoring-bot"/>
+    <property name="jux.platform" value="Linux-6.1.0-x86_64"/>
+    <property name="jux.python_version" value="3.12.1"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="production-app"/>
+    <property name="jux.git_commit" value="prod123456789012345678901234567890abcd"/>
+    <property name="jux.git_branch" value="main"/>
+    <property name="jux.git_tag" value="v2.5.0"/>
+    <property name="jux.git_status" value="clean"/>
+    <property name="jux.ci_provider" value="datadog-synthetics"/>
+    <property name="jux.ci_build_id" value="SYNTH-456"/>
+  </properties>
+  <testcase name="test_health_endpoint" classname="tests.smoke.test_health" time="0.234"/>
+  <testcase name="test_database_connectivity" classname="tests.smoke.test_health" time="0.456"/>
+  <testcase name="test_cache_connectivity" classname="tests.smoke.test_health" time="0.345"/>
+  <testcase name="test_api_version" classname="tests.smoke.test_api" time="0.189"/>
+  <testcase name="test_static_assets" classname="tests.smoke.test_assets" time="0.121"/>
+</testsuite>

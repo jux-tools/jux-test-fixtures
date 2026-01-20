@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Mobile Feature" tests="5" failures="1" errors="0" skipped="0" time="25.678" timestamp="2026-01-20T10:30:00" hostname="appium-runner">
+  <properties>
+    <property name="project" value="mobile-app"/>
+    <property name="feature" value="mobile"/>
+    <property name="platform" value="iOS"/>
+    <property name="device" value="iPhone 15 Pro"/>
+  </properties>
+  <testcase name="App launches successfully" classname="Mobile Feature" time="3.456">
+    <system-out>
+Given the app is installed
+When the user taps the app icon
+Then the app should launch
+And the splash screen should display
+    </system-out>
+  </testcase>
+  <testcase name="User can navigate to settings" classname="Mobile Feature" time="2.345">
+    <system-out>
+Given the app is open
+When the user taps the settings icon
+Then the settings screen should display
+    </system-out>
+  </testcase>
+  <testcase name="Push notification received" classname="Mobile Feature" time="5.678">
+    <system-out>
+Given the user has enabled notifications
+When a push notification is sent
+Then the notification should appear
+    </system-out>
+  </testcase>
+  <testcase name="Offline mode works" classname="Mobile Feature" time="8.901">
+    <system-out>
+Given the user is logged in
+When the device goes offline
+Then cached data should be available
+    </system-out>
+    <failure message="Offline cache not populated">
+Expected cached items: 10
+Actual cached items: 0
+    </failure>
+  </testcase>
+  <testcase name="Biometric authentication" classname="Mobile Feature" time="5.298">
+    <system-out>
+Given biometric auth is enabled
+When the user attempts Face ID
+Then the user should be authenticated
+    </system-out>
+  </testcase>
+</testsuite>

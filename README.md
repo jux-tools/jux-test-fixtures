@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: Apache-2.0
+SPDX-FileCopyrightText: 2026 Georges Martin <jrjsmrtn@gmail.com>
+-->
+
 # Jux Test Fixtures
 
 Curated collection of JUnit XML test fixtures for the Jux ecosystem.

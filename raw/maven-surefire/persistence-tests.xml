@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.persistence.RepositoryTests" tests="7" failures="0" errors="0" skipped="0" time="2.123" timestamp="2026-01-20T10:30:00" hostname="db-test-runner">
+  <properties>
+    <property name="project" value="jpa-repository"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="hibernate.version" value="6.4.1"/>
+    <property name="database" value="h2"/>
+  </properties>
+  <testcase name="testSaveEntity" classname="com.example.persistence.EntityRepositoryTest" time="0.234"/>
+  <testcase name="testFindById" classname="com.example.persistence.EntityRepositoryTest" time="0.156"/>
+  <testcase name="testFindAll" classname="com.example.persistence.EntityRepositoryTest" time="0.189"/>
+  <testcase name="testUpdate" classname="com.example.persistence.EntityRepositoryTest" time="0.267"/>
+  <testcase name="testDelete" classname="com.example.persistence.EntityRepositoryTest" time="0.145"/>
+  <testcase name="testCustomQuery" classname="com.example.persistence.EntityRepositoryTest" time="0.345"/>
+  <testcase name="testPagination" classname="com.example.persistence.EntityRepositoryTest" time="0.287"/>
+</testsuite>

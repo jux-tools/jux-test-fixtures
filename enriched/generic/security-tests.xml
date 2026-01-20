@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SecurityTests" tests="8" failures="2" errors="0" skipped="1" time="3.456" timestamp="2026-01-20T10:30:00" hostname="security-scanner">
+  <properties>
+    <property name="project" value="auth-service"/>
+    <property name="scan.type" value="SAST"/>
+    <property name="compliance" value="OWASP-TOP-10"/>
+    <property name="jux.hostname" value="security-scanner"/>
+    <property name="jux.username" value="security-bot"/>
+    <property name="jux.platform" value="Linux-6.1.0-x86_64"/>
+    <property name="jux.python_version" value="3.12.1"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="auth-service"/>
+    <property name="jux.git_commit" value="sec123def456789012345678901234567890abc"/>
+    <property name="jux.git_branch" value="main"/>
+    <property name="jux.git_status" value="clean"/>
+    <property name="jux.ci_provider" value="github"/>
+    <property name="jux.ci_build_id" value="54321"/>
+  </properties>
+  <testcase name="test_sql_injection_prevention" classname="tests.security.test_injection" time="0.456"/>
+  <testcase name="test_xss_prevention" classname="tests.security.test_injection" time="0.389"/>
+  <testcase name="test_csrf_token_validation" classname="tests.security.test_csrf" time="0.234"/>
+  <testcase name="test_password_hashing" classname="tests.security.test_auth" time="0.178"/>
+  <testcase name="test_rate_limiting" classname="tests.security.test_auth" time="0.567">
+    <failure message="Rate limit not enforced correctly">
+Expected 429 after 100 requests, got 200 after 150 requests
+    </failure>
+  </testcase>
+  <testcase name="test_jwt_expiration" classname="tests.security.test_auth" time="0.345"/>
+  <testcase name="test_sensitive_data_exposure" classname="tests.security.test_data" time="0.678">
+    <failure message="PII found in logs">
+Sensitive data pattern detected in application logs
+    </failure>
+  </testcase>
+  <testcase name="test_encryption_at_rest" classname="tests.security.test_data" time="0.000">
+    <skipped message="Encryption module not configured in test environment"/>
+  </testcase>
+</testsuite>

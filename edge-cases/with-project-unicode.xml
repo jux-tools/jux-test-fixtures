@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UnicodeProject" tests="2" failures="0" errors="0" skipped="0" time="0.123" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <property name="project" value="项目-αβγ-проект"/>
+    <property name="description" value="Unicode project name test"/>
+  </properties>
+  <testcase name="test_unicode_handling" classname="tests.test_i18n" time="0.056"/>
+  <testcase name="test_encoding" classname="tests.test_i18n" time="0.067"/>
+</testsuite>

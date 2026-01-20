@@ -1,3 +1,8 @@
+<!--
+SPDX-License-Identifier: Apache-2.0
+SPDX-FileCopyrightText: 2026 Georges Martin <jrjsmrtn@gmail.com>
+-->
+
 # JUnit XML Schemas
 
 This directory contains references to JUnit XML schema definitions.

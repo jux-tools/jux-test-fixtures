@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.client.RestClientTests" tests="5" failures="2" errors="0" skipped="0" time="4.567" timestamp="2026-01-20T10:30:00" hostname="client-runner">
+  <properties>
+    <property name="project" value="api-client-sdk"/>
+    <property name="java.version" value="17.0.9"/>
+    <property name="os.name" value="Darwin"/>
+    <property name="wiremock.version" value="3.3.1"/>
+  </properties>
+  <testcase name="testGetRequest" classname="com.example.client.HttpClientTest" time="0.567"/>
+  <testcase name="testPostRequest" classname="com.example.client.HttpClientTest" time="0.678"/>
+  <testcase name="testRetryOnFailure" classname="com.example.client.HttpClientTest" time="1.234">
+    <failure message="Retry count exceeded" type="java.lang.AssertionError">
+java.lang.AssertionError: Expected 3 retries but got 2
+	at com.example.client.HttpClientTest.testRetryOnFailure(HttpClientTest.java:78)
+    </failure>
+  </testcase>
+  <testcase name="testCircuitBreaker" classname="com.example.client.ResilienceTest" time="1.456">
+    <failure message="Circuit breaker did not open" type="java.lang.AssertionError">
+java.lang.AssertionError: Circuit breaker state: CLOSED, expected: OPEN
+	at com.example.client.ResilienceTest.testCircuitBreaker(ResilienceTest.java:45)
+    </failure>
+  </testcase>
+  <testcase name="testTimeout" classname="com.example.client.HttpClientTest" time="0.632"/>
+</testsuite>

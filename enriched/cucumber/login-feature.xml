@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login Feature" tests="5" failures="1" errors="0" skipped="0" time="8.234" timestamp="2026-01-20T10:30:00" hostname="cucumber-runner">
+  <properties>
+    <property name="project" value="web-portal"/>
+    <property name="feature" value="login"/>
+    <property name="cucumber.version" value="7.15.0"/>
+    <property name="jux.hostname" value="cucumber-runner"/>
+    <property name="jux.username" value="qa-automation"/>
+    <property name="jux.platform" value="Linux-6.1.0-x86_64"/>
+    <property name="jux.ruby_version" value="3.2.2"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="web-portal"/>
+    <property name="jux.git_commit" value="cuke123456789012345678901234567890abcd"/>
+    <property name="jux.git_branch" value="feature/login-enhancements"/>
+    <property name="jux.git_status" value="clean"/>
+    <property name="jux.ci_provider" value="circleci"/>
+    <property name="jux.ci_build_id" value="CIRCLE-123"/>
+  </properties>
+  <testcase name="Successful login with valid credentials" classname="Login Feature" time="1.567">
+    <system-out>
+Given the user is on the login page
+When the user enters valid credentials
+And clicks the login button
+Then the user should be redirected to the dashboard
+    </system-out>
+  </testcase>
+  <testcase name="Failed login with invalid password" classname="Login Feature" time="1.234">
+    <system-out>
+Given the user is on the login page
+When the user enters invalid password
+And clicks the login button
+Then an error message should be displayed
+    </system-out>
+  </testcase>
+  <testcase name="Account lockout after 3 failed attempts" classname="Login Feature" time="3.456">
+    <system-out>
+Given the user is on the login page
+When the user enters wrong password 3 times
+Then the account should be locked
+    </system-out>
+    <failure message="Account not locked after 3 attempts">
+Expected account status: LOCKED
+Actual account status: ACTIVE
+    </failure>
+  </testcase>
+  <testcase name="Password reset link" classname="Login Feature" time="1.234">
+    <system-out>
+Given the user is on the login page
+When the user clicks forgot password
+And enters their email
+Then a reset link should be sent
+    </system-out>
+  </testcase>
+  <testcase name="Remember me functionality" classname="Login Feature" time="0.743">
+    <system-out>
+Given the user is on the login page
+When the user checks remember me
+And logs in successfully
+Then the session should persist for 30 days
+    </system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="0" failures="0" skipped="0" tests="6" time="12.345" timestamp="2026-01-20T10:30:00" hostname="ml-runner">
+    <properties>
+      <property name="project" value="ml-pipeline"/>
+      <property name="Python" value="3.11.7"/>
+      <property name="Platform" value="Linux-6.1.0-x86_64"/>
+      <property name="Packages" value="pytest-8.0.0, pandas-2.1.4, scikit-learn-1.4.0, numpy-1.26.3"/>
+    </properties>
+    <testcase classname="tests.test_preprocessing" name="test_data_normalization" time="1.234">
+      <properties>
+        <property name="dataset_size" value="10000"/>
+      </properties>
+    </testcase>
+    <testcase classname="tests.test_preprocessing" name="test_feature_encoding" time="0.987"/>
+    <testcase classname="tests.test_model" name="test_model_training" time="5.678">
+      <properties>
+        <property name="model_type" value="RandomForest"/>
+        <property name="accuracy" value="0.94"/>
+      </properties>
+    </testcase>
+    <testcase classname="tests.test_model" name="test_model_prediction" time="0.456"/>
+    <testcase classname="tests.test_model" name="test_model_serialization" time="0.234"/>
+    <testcase classname="tests.test_evaluation" name="test_cross_validation" time="3.756">
+      <properties>
+        <property name="cv_folds" value="5"/>
+        <property name="mean_score" value="0.92"/>
+      </properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="MultiProjectSuite" tests="4" failures="0" errors="0" skipped="0" time="0.456">
+  <testsuite name="ProjectA" tests="2" failures="0" errors="0" skipped="0" time="0.234" hostname="runner-01">
+    <properties>
+      <property name="project" value="project-alpha"/>
+    </properties>
+    <testcase name="test_alpha_one" classname="alpha.tests" time="0.123"/>
+    <testcase name="test_alpha_two" classname="alpha.tests" time="0.111"/>
+  </testsuite>
+  <testsuite name="ProjectB" tests="2" failures="0" errors="0" skipped="0" time="0.222" hostname="runner-01">
+    <properties>
+      <property name="project" value="project-beta"/>
+    </properties>
+    <testcase name="test_beta_one" classname="beta.tests" time="0.111"/>
+    <testcase name="test_beta_two" classname="beta.tests" time="0.111"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="API Feature" tests="7" failures="0" errors="0" skipped="0" time="3.456" timestamp="2026-01-20T10:30:00" hostname="api-bdd-runner">
+  <properties>
+    <property name="project" value="rest-api"/>
+    <property name="feature" value="api"/>
+    <property name="base.url" value="https://api.example.com"/>
+  </properties>
+  <testcase name="GET /users returns list of users" classname="API Feature" time="0.345">
+    <system-out>
+Given the API is available
+When I send a GET request to /users
+Then the response status should be 200
+And the response should contain a list of users
+    </system-out>
+  </testcase>
+  <testcase name="POST /users creates a new user" classname="API Feature" time="0.456">
+    <system-out>
+Given the API is available
+When I send a POST request to /users with valid data
+Then the response status should be 201
+And the user should be created
+    </system-out>
+  </testcase>
+  <testcase name="GET /users/{id} returns user details" classname="API Feature" time="0.234">
+    <system-out>
+Given a user exists with id 123
+When I send a GET request to /users/123
+Then the response status should be 200
+And the response should contain user details
+    </system-out>
+  </testcase>
+  <testcase name="PUT /users/{id} updates user" classname="API Feature" time="0.567">
+    <system-out>
+Given a user exists with id 123
+When I send a PUT request to /users/123 with updated data
+Then the response status should be 200
+And the user should be updated
+    </system-out>
+  </testcase>
+  <testcase name="DELETE /users/{id} removes user" classname="API Feature" time="0.345">
+    <system-out>
+Given a user exists with id 123
+When I send a DELETE request to /users/123
+Then the response status should be 204
+    </system-out>
+  </testcase>
+  <testcase name="GET /users with invalid token returns 401" classname="API Feature" time="0.234">
+    <system-out>
+Given the API requires authentication
+When I send a GET request without a valid token
+Then the response status should be 401
+    </system-out>
+  </testcase>
+  <testcase name="POST /users with invalid data returns 400" classname="API Feature" time="0.275">
+    <system-out>
+Given the API is available
+When I send a POST request with invalid data
+Then the response status should be 400
+And the response should contain validation errors
+    </system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="1" failures="0" skipped="0" tests="5" time="1.234" timestamp="2026-01-20T10:30:00" hostname="flask-runner">
+    <properties>
+      <property name="project" value="flask-api"/>
+      <property name="Python" value="3.11.7"/>
+      <property name="Platform" value="Linux-6.1.0-x86_64"/>
+      <property name="Packages" value="pytest-8.0.0, Flask-3.0.0, pytest-flask-1.3.0"/>
+    </properties>
+    <testcase classname="tests.test_routes" name="test_health_check" time="0.123"/>
+    <testcase classname="tests.test_routes" name="test_api_version" time="0.145"/>
+    <testcase classname="tests.test_routes" name="test_protected_endpoint" time="0.234"/>
+    <testcase classname="tests.test_routes" name="test_rate_limit" time="0.345">
+      <error message="ConnectionError: Redis unavailable" type="ConnectionError">
+ConnectionError: Error connecting to Redis at localhost:6379
+  File "tests/test_routes.py", line 45, in test_rate_limit
+    </error>
+    </testcase>
+    <testcase classname="tests.test_routes" name="test_cors_headers" time="0.187"/>
+  </testsuite>
+</testsuites>

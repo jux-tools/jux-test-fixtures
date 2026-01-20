@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestcaseLevelProject" tests="3" failures="0" errors="0" skipped="0" time="0.234" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <property name="suite_project" value="parent-project"/>
+  </properties>
+  <testcase name="test_from_subproject_a" classname="subproject_a.tests" time="0.078">
+    <properties>
+      <property name="project" value="subproject-a"/>
+    </properties>
+  </testcase>
+  <testcase name="test_from_subproject_b" classname="subproject_b.tests" time="0.089">
+    <properties>
+      <property name="project" value="subproject-b"/>
+    </properties>
+  </testcase>
+  <testcase name="test_no_project" classname="shared.tests" time="0.067"/>
+</testsuite>

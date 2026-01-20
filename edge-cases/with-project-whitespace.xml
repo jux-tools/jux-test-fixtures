@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WhitespaceProject" tests="2" failures="0" errors="0" skipped="0" time="0.123" timestamp="2026-01-20T10:30:00">
+  <properties>
+    <property name="project" value="  my project  "/>
+    <property name="note" value="Leading and trailing whitespace"/>
+  </properties>
+  <testcase name="test_whitespace_handling" classname="tests.test_edge" time="0.056"/>
+  <testcase name="test_trim" classname="tests.test_edge" time="0.067"/>
+</testsuite>

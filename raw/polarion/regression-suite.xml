@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RegressionSuite" tests="6" failures="1" errors="0" skipped="0" time="12.345" timestamp="2026-01-20T10:30:00" hostname="polarion-runner">
+  <properties>
+    <property name="project" value="enterprise-portal"/>
+    <property name="polarion-project-id" value="PORTAL"/>
+    <property name="polarion-testrun-id" value="REG-2026-01"/>
+    <property name="polarion-testrun-title" value="January Regression"/>
+    <property name="polarion-user-id" value="ci-automation"/>
+  </properties>
+  <testcase name="test_user_login" classname="tests.regression.test_auth">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-001"/>
+    </properties>
+  </testcase>
+  <testcase name="test_dashboard_load" classname="tests.regression.test_dashboard">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-002"/>
+    </properties>
+  </testcase>
+  <testcase name="test_report_generation" classname="tests.regression.test_reports">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-003"/>
+    </properties>
+    <failure message="Report generation timed out">
+TimeoutError: Report generation exceeded 30s limit
+    </failure>
+  </testcase>
+  <testcase name="test_export_csv" classname="tests.regression.test_export">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-004"/>
+    </properties>
+  </testcase>
+  <testcase name="test_export_pdf" classname="tests.regression.test_export">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-005"/>
+    </properties>
+  </testcase>
+  <testcase name="test_user_logout" classname="tests.regression.test_auth">
+    <properties>
+      <property name="polarion-testcase-id" value="PORTAL-TC-006"/>
+    </properties>
+  </testcase>
+</testsuite>

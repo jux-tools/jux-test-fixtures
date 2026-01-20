@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SecurityAudit" tests="7" failures="2" errors="0" skipped="0" time="15.678" timestamp="2026-01-20T10:30:00" hostname="security-scanner">
+  <properties>
+    <property name="project" value="healthcare-app"/>
+    <property name="polarion-project-id" value="HEALTH"/>
+    <property name="polarion-testrun-id" value="SEC-AUDIT-2026"/>
+    <property name="polarion-testrun-title" value="Annual Security Audit"/>
+    <property name="compliance" value="HIPAA"/>
+  </properties>
+  <testcase name="test_data_encryption" classname="tests.security.test_encryption" time="2.345">
+    <properties>
+      <property name="polarion-testcase-id" value="HEALTH-SEC-001"/>
+      <property name="severity" value="critical"/>
+    </properties>
+  </testcase>
+  <testcase name="test_access_control" classname="tests.security.test_auth" time="1.567">
+    <properties>
+      <property name="polarion-testcase-id" value="HEALTH-SEC-002"/>
+      <property name="severity" value="critical"/>
+    </properties>
+  </testcase>
+  <testcase name="test_audit_logging" classname="tests.security.test_audit" time="2.234">
+    <properties>
+      <property name="polarion-testcase-id" value="HEALTH-SEC-003"/>
+      <property name="severity" value="high"/>
+    </properties>
+    <failure message="Audit log missing PHI access events">
+Expected 5 PHI access events, found 3
+    </failure>
+  </testcase>
+  <testcase name="test_session_management" classname="tests.security.test_session" time="1.890">
+    <properties>
+      <property name="polarion-testcase-id" value="HEALTH-SEC-004"/>
+      <property name="severity" value="high"/>
+    </properties>
+  </testcase>
+  <testcase name="test_password_policy" classname="tests.security.test_auth" time="0.987">
+    <properties>
+      <property name="polarion-testcase-id" value="HEALTH-SEC-005"/>
+      <property name="severity" value="medium"/>
+    </properties>
+  </testcase>
+  <testcase name="test_data_masking" classname="tests.security.test_privacy" time="3.456">
+    <properties>
+      <property name="polarion-testcase-id" value="HEALTH-SEC-006"/>
+      <property name="severity" value="high"/>
+    </properties>
+    <failure message="SSN not masked in API response">
+Unmasked SSN pattern found in /api/patients response
+    </failure>
+  </testcase>
+  <testcase name="test_secure_transmission" classname="tests.security.test_network" time="3.199">
+    <properties>
+      <property name="polarion-testcase-id" value="HEALTH-SEC-007"/>
+      <property name="severity" value="critical"/>
+    </properties>
+  </testcase>
+</testsuite>

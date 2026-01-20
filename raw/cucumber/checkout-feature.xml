@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Checkout Feature" tests="6" failures="0" errors="1" skipped="1" time="12.567" timestamp="2026-01-20T10:30:00" hostname="bdd-runner">
+  <properties>
+    <property name="project" value="ecommerce-store"/>
+    <property name="feature" value="checkout"/>
+    <property name="browser" value="chrome"/>
+  </properties>
+  <testcase name="Add item to cart" classname="Checkout Feature" time="1.234">
+    <system-out>
+Given the user is browsing products
+When the user clicks Add to Cart
+Then the item should appear in the cart
+    </system-out>
+  </testcase>
+  <testcase name="Update cart quantity" classname="Checkout Feature" time="0.987">
+    <system-out>
+Given the user has items in the cart
+When the user changes the quantity
+Then the cart total should update
+    </system-out>
+  </testcase>
+  <testcase name="Apply discount code" classname="Checkout Feature" time="1.567">
+    <system-out>
+Given the user is on the checkout page
+When the user enters a valid discount code
+Then the discount should be applied
+    </system-out>
+  </testcase>
+  <testcase name="Complete purchase with credit card" classname="Checkout Feature" time="4.567">
+    <system-out>
+Given the user has items in the cart
+When the user enters payment details
+And confirms the order
+Then the order should be placed
+    </system-out>
+  </testcase>
+  <testcase name="Complete purchase with PayPal" classname="Checkout Feature" time="2.345">
+    <system-out>
+Given the user has items in the cart
+When the user selects PayPal
+Then the user should be redirected to PayPal
+    </system-out>
+    <error message="PayPal sandbox unavailable">
+ConnectionError: Unable to connect to PayPal sandbox
+    </error>
+  </testcase>
+  <testcase name="Complete purchase with Apple Pay" classname="Checkout Feature" time="0.000">
+    <skipped message="Apple Pay not supported in test environment"/>
+  </testcase>
+</testsuite>

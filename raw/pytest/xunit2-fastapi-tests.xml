@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="0" failures="0" skipped="1" tests="7" time="1.567" timestamp="2026-01-20T10:30:00" hostname="fastapi-runner">
+    <properties>
+      <property name="project" value="fastapi-microservice"/>
+      <property name="Python" value="3.12.1"/>
+      <property name="Platform" value="Linux-6.1.0-x86_64"/>
+      <property name="Packages" value="pytest-8.0.0, httpx-0.26.0, FastAPI-0.109.0"/>
+    </properties>
+    <testcase classname="tests.test_endpoints" name="test_openapi_schema" time="0.089"/>
+    <testcase classname="tests.test_endpoints" name="test_create_item" time="0.234"/>
+    <testcase classname="tests.test_endpoints" name="test_read_item" time="0.156"/>
+    <testcase classname="tests.test_endpoints" name="test_update_item" time="0.178"/>
+    <testcase classname="tests.test_endpoints" name="test_delete_item" time="0.145"/>
+    <testcase classname="tests.test_endpoints" name="test_list_items_pagination" time="0.267"/>
+    <testcase classname="tests.test_endpoints" name="test_websocket_connection" time="0.000">
+      <skipped message="WebSocket tests disabled in CI"/>
+    </testcase>
+  </testsuite>
+</testsuites>

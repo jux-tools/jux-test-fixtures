@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.app.ApplicationTests" tests="8" failures="1" errors="0" skipped="0" time="5.678" timestamp="2026-01-20T10:30:00" hostname="spring-runner">
+  <properties>
+    <property name="project" value="spring-boot-app"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="spring.version" value="3.2.1"/>
+    <property name="os.name" value="Linux"/>
+    <property name="jux.hostname" value="spring-runner"/>
+    <property name="jux.username" value="jenkins"/>
+    <property name="jux.platform" value="Linux-6.1.0-x86_64"/>
+    <property name="jux.java_version" value="21.0.1"/>
+    <property name="jux.timestamp" value="2026-01-20T10:30:00Z"/>
+    <property name="jux.project_name" value="spring-boot-app"/>
+    <property name="jux.git_commit" value="spring123456789012345678901234567890ab"/>
+    <property name="jux.git_branch" value="release/1.2.0"/>
+    <property name="jux.git_status" value="clean"/>
+    <property name="jux.ci_provider" value="jenkins"/>
+    <property name="jux.ci_build_id" value="BUILD-456"/>
+  </properties>
+  <testcase name="contextLoads" classname="com.example.app.ApplicationTests" time="2.345"/>
+  <testcase name="testUserService" classname="com.example.app.service.UserServiceTest" time="0.456"/>
+  <testcase name="testUserRepository" classname="com.example.app.repository.UserRepositoryTest" time="0.567"/>
+  <testcase name="testUserController" classname="com.example.app.controller.UserControllerTest" time="0.678"/>
+  <testcase name="testAuthentication" classname="com.example.app.security.AuthenticationTest" time="0.789"/>
+  <testcase name="testAuthorization" classname="com.example.app.security.AuthorizationTest" time="0.234">
+    <failure message="Access denied for role USER" type="java.lang.AssertionError">
+java.lang.AssertionError: Expected role ADMIN to be required
+	at com.example.app.security.AuthorizationTest.testAuthorization(AuthorizationTest.java:45)
+    </failure>
+  </testcase>
+  <testcase name="testCaching" classname="com.example.app.cache.CacheTest" time="0.345"/>
+  <testcase name="testScheduledTask" classname="com.example.app.scheduler.SchedulerTest" time="0.264"/>
+</testsuite>

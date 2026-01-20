@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UnitTests" tests="10" failures="0" errors="0" skipped="0" time="0.456" timestamp="2026-01-20T10:30:00" hostname="dev-machine">
+  <properties>
+    <property name="project" value="core-utils"/>
+    <property name="test.type" value="unit"/>
+    <property name="coverage" value="92.5"/>
+  </properties>
+  <testcase name="test_string_utils_trim" classname="tests.unit.test_strings" time="0.012"/>
+  <testcase name="test_string_utils_split" classname="tests.unit.test_strings" time="0.015"/>
+  <testcase name="test_string_utils_join" classname="tests.unit.test_strings" time="0.011"/>
+  <testcase name="test_date_utils_parse" classname="tests.unit.test_dates" time="0.034"/>
+  <testcase name="test_date_utils_format" classname="tests.unit.test_dates" time="0.028"/>
+  <testcase name="test_date_utils_diff" classname="tests.unit.test_dates" time="0.045"/>
+  <testcase name="test_math_utils_round" classname="tests.unit.test_math" time="0.008"/>
+  <testcase name="test_math_utils_clamp" classname="tests.unit.test_math" time="0.009"/>
+  <testcase name="test_collection_utils_flatten" classname="tests.unit.test_collections" time="0.067"/>
+  <testcase name="test_collection_utils_chunk" classname="tests.unit.test_collections" time="0.054"/>
+</testsuite>

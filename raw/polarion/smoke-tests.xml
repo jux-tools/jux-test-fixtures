@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SmokeTests" tests="4" failures="0" errors="0" skipped="0" time="2.345" timestamp="2026-01-20T10:30:00" hostname="smoke-runner">
+  <properties>
+    <property name="project" value="crm-system"/>
+    <property name="polarion-project-id" value="CRM"/>
+    <property name="polarion-testrun-id" value="SMOKE-20260120"/>
+    <property name="polarion-testrun-title" value="Daily Smoke Test"/>
+    <property name="polarion-group-id" value="smoke"/>
+  </properties>
+  <testcase name="test_application_startup" classname="tests.smoke.test_health" time="0.567">
+    <properties>
+      <property name="polarion-testcase-id" value="CRM-SM-001"/>
+    </properties>
+  </testcase>
+  <testcase name="test_database_connection" classname="tests.smoke.test_health" time="0.234">
+    <properties>
+      <property name="polarion-testcase-id" value="CRM-SM-002"/>
+    </properties>
+  </testcase>
+  <testcase name="test_api_endpoint" classname="tests.smoke.test_health" time="0.345">
+    <properties>
+      <property name="polarion-testcase-id" value="CRM-SM-003"/>
+    </properties>
+  </testcase>
+  <testcase name="test_ui_accessible" classname="tests.smoke.test_health" time="1.199">
+    <properties>
+      <property name="polarion-testcase-id" value="CRM-SM-004"/>
+    </properties>
+  </testcase>
+</testsuite>
