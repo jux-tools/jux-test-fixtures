@@ -27,9 +27,9 @@ openssl ecparam -name prime256v1 -genkey -noout -out test-key.pem
 2. Install py-juxlib:
 
 ```bash
-uv pip install ../py-juxlib
-# or
-pip install -e ../py-juxlib
+uv pip install py-juxlib
+# or for local development:
+# uv pip install -e ../py-juxlib
 ```
 
 3. Sign the enriched fixtures:
